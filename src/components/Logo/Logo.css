@@ -1,0 +1,13 @@
+.Logo {
+    height: 12vmin;
+    width: 12vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--midnight);
+    color: var(--blush);
+    font-size: 2.5vmin;
+    border: .6vmin solid var(--cornflower); 
+  }
