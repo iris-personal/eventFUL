@@ -1,17 +1,21 @@
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './ActivitiesPage.css';
+import Logo from '../../components/Logo/Logo';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
-import { checkToken } from '../../utilities/users-service';
-
-export default function ActivitiesPage() {
-  
-  async function handleCheckToken() {
-    const expDate = await checkToken();
-    console.log(expDate.toLocaleDateString())
-  }
+export default function ActivitiesPage({ user, setUser }) {
 
   return (
-    <>
-      <h1>OrderHistoryPage</h1>
-      <button onClick={handleCheckToken}>Check When My Login Expires</button>
-    </>
+    <main className="ActivitiesPage">
+      <aside>
+        <Logo />
+        <Link to="" className="button btn-sm">NEW ACTIVITY</Link>
+        <UserLogOut user={user} setUser={setUser} />
+      </aside>
+      {/* Render an OrderList component (needs to be coded) */}
+      {/* Render the existing OrderDetail component */}
+
+    </main>
   );
 }

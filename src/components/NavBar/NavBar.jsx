@@ -10,8 +10,6 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to='/orders'>Order History</Link>
-      &nbsp; | &nbsp;
       <Link to='/calendar'>Calendar</Link>
       &nbsp; | &nbsp;
       Welcome, {user.name}
