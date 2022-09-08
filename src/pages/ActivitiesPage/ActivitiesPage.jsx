@@ -14,7 +14,7 @@ export default function ActivitiesPage({ user, setUser }) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       {/* Render an Day or CalendarDate component (needs to be coded) */}
-      {/* Render the existing OrderDetail component */}
+      {/* Render AddActivity component */}
 
     </main>
   );
