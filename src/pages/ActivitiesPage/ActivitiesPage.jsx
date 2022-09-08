@@ -1,11 +1,18 @@
-// import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ActivitiesPage.css';
+import * as activitiesAPI from "../../utilities/activities-api";
 import Logo from '../../components/Logo/Logo';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
-export default function ActivitiesPage({ user, setUser }) {
-
+export default function ActivitiesPage({ user, setUser, activity, setActivity }) {
+useEffect(function() {
+  async function getActivities() {
+    const allActivities = await activitiesAPI.getAll();
+    setActivity(allActivities);
+  }
+  getActivities();
+}, []);
   return (
     <main className="ActivitiesPage">
       <aside>

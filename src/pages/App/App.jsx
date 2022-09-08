@@ -8,6 +8,7 @@ import './App.css';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [activity, setActivity] = useState([]);
 
   return (
     <main className="App">
@@ -16,7 +17,7 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path='/calendar' element={<CalendarPage />} />
-            <Route path='/calendar/activities' element={<ActivitiesPage />} />
+            <Route path='/activities' element={<ActivitiesPage activity={activity} setActivity={setActivity} />} />
           </Routes>
         </>
         :
