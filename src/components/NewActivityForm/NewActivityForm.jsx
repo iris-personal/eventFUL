@@ -25,21 +25,21 @@ export default function NewActivityForm({ addActivity }) {
     return (
         <>
         <h1>Add Activity</h1>
-        <form onSubmit = {handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <input 
-            onChange = {handleChange}
-            value = {newActivity.date}
-            type = "Date"
+            onChange={handleChange}
+            value={newActivity.date}
+            type="Date"
             ></input>
             <input 
-            onChange = {handleChange}
-            value = {newActivity.time}
-            type = "String"
+            onChange={handleChange}
+            value={newActivity.time}
+            type="String"
             ></input>
             <input 
-            onChange = {handleChange}
-            value = {newActivity.name}
-            type = "String"
+            onChange={handleChange}
+            value={newActivity.name}
+            type="String"
             ></input>
         </form>
         </>

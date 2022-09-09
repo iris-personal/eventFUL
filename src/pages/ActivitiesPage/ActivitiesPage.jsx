@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ActivitiesPage.css';
 import * as activitiesAPI from "../../utilities/activities-api";
@@ -8,6 +8,7 @@ import NewActivityForm from '../../components/NewActivityForm/NewActivityForm';
 import ActivityList from '../../components/ActivityList/ActivityList';
 
 export default function ActivitiesPage({ user, setUser, activity, setActivity }) {
+  const [activities, setActivities] = useState([])
 useEffect(function() {
   async function getActivities() {
     const allActivities = await activitiesAPI.getAll();
@@ -16,7 +17,7 @@ useEffect(function() {
   getActivities();
 }, []);
 function addActivity(activity) {
-  setActivity([...activities, activity]);
+  setActivities([...activities, activity]);
 }
   return (
     <main className="ActivitiesPage">
