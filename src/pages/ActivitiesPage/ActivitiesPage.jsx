@@ -27,10 +27,9 @@ function addActivity(activity) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       {/* Render an Day or CalendarDate component (needs to be coded) */}
-      <ActivityList activity={activity} />
+      <ActivityList activities={activities} activity={activity} />
       {/* Render AddActivity component */}
       <NewActivityForm addActivity={addActivity} />
-
     </main>
   );
 }
