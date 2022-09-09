@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export default function NewActivityForm({ addActivity }) {
+export default function NewActivityForm({ addActivity, day }) {
     const [newActivity, setNewActivity] = useState({
         date: "",
         time: "",
@@ -30,6 +30,7 @@ export default function NewActivityForm({ addActivity }) {
             onChange={handleChange}
             value={newActivity.date}
             type="Date"
+            defaultValue={day}
             ></input>
             <input 
             onChange={handleChange}

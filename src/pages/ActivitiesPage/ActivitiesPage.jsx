@@ -7,7 +7,7 @@ import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import NewActivityForm from '../../components/NewActivityForm/NewActivityForm';
 import ActivityList from '../../components/ActivityList/ActivityList';
 
-export default function ActivitiesPage({ user, setUser, activity, setActivity }) {
+export default function ActivitiesPage({ user, setUser, activity, setActivity, day }) {
   const [activities, setActivities] = useState([])
 useEffect(function() {
   async function getActivities() {
@@ -27,9 +27,9 @@ function addActivity(activity) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       {/* Render an Day or CalendarDate component (needs to be coded) */}
-      <ActivityList activities={activities} activity={activity} />
+      <ActivityList day={day} activities={activities} activity={activity} />
       {/* Render AddActivity component */}
-      <NewActivityForm addActivity={addActivity} />
+      <NewActivityForm day={day} addActivity={addActivity} />
     </main>
   );
 }

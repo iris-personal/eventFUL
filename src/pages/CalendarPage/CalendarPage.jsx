@@ -4,17 +4,16 @@ import { Calendar } from "react-modern-calendar-datepicker";
 import CalendarDate from "./CalendarDate";
 import "./CalendarPage.css"
 
-export default function CalendarPage() {
-  const [selectedDay, setSelectedDay] = useState(null);
+export default function CalendarPage({ day, setSelectedDay}) {
   return (
     <>   
     <Calendar
-      value={selectedDay}
+      value={day}
       onChange={setSelectedDay}
       calendarClassName="responsive-calendar" // added this
       shouldHighlightWeekends
     />
-    <CalendarDate day={selectedDay} />
+    <CalendarDate day={day} />
     </>
   );
 
