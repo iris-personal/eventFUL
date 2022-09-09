@@ -8,7 +8,7 @@ export default function NewActivityForm({ addActivity }) {
         name: ""
     })
 
-    handleSubmit = (evt) => {
+    function handleSubmit(evt) {
         evt.preventDefault();
         addActivity(newActivity);
         setNewActivity({
@@ -18,7 +18,7 @@ export default function NewActivityForm({ addActivity }) {
         });
     }
 
-    handleChange = (evt) => {
+   function handleChange(evt) {
         setNewActivity({ ...newActivity, [evt.target.name]: evt.target.value });
     }
 
