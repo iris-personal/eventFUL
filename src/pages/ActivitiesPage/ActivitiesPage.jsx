@@ -5,6 +5,7 @@ import * as activitiesAPI from "../../utilities/activities-api";
 import Logo from '../../components/Logo/Logo';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import NewActivityForm from '../../components/NewActivityForm/NewActivityForm';
+import ActivityList from '../../components/ActivityList/ActivityList';
 
 export default function ActivitiesPage({ user, setUser, activity, setActivity }) {
 useEffect(function() {
@@ -25,6 +26,7 @@ function addActivity(activity) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       {/* Render an Day or CalendarDate component (needs to be coded) */}
+      <ActivityList activity={activity} />
       {/* Render AddActivity component */}
       <NewActivityForm addActivity={addActivity} />
 
