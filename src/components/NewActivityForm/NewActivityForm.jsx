@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export default function ActivityForm({ addActivity }) {
+export default function NewActivityForm({ addActivity }) {
     const [newActivity, setNewActivity] = useState({
         date: "",
         time: "",

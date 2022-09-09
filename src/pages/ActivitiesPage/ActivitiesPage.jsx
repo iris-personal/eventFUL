@@ -4,6 +4,7 @@ import './ActivitiesPage.css';
 import * as activitiesAPI from "../../utilities/activities-api";
 import Logo from '../../components/Logo/Logo';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
+import NewActivityForm from '../../components/NewActivityForm/NewActivityForm';
 
 export default function ActivitiesPage({ user, setUser, activity, setActivity }) {
 useEffect(function() {
@@ -13,6 +14,9 @@ useEffect(function() {
   }
   getActivities();
 }, []);
+function addActivity(activity) {
+  setActivity([...activities, activity]);
+}
   return (
     <main className="ActivitiesPage">
       <aside>
@@ -22,6 +26,7 @@ useEffect(function() {
       </aside>
       {/* Render an Day or CalendarDate component (needs to be coded) */}
       {/* Render AddActivity component */}
+      <NewActivityForm addActivity={addActivity} />
 
     </main>
   );
