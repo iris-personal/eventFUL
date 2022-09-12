@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import CalendarPage from '../CalendarPage/CalendarPage';
@@ -19,6 +19,7 @@ export default function App() {
             {/* Route components in here */}
             <Route path='/calendar' element={<CalendarPage day={selectedDay} setSelectedDay={setSelectedDay} />} />
             <Route path='/calendar/activities' element={<ActivitiesPage day={selectedDay} activity={activity} setActivity={setActivity} />} />
+            <Route path="/*" element={<Navigate to="/calendar" />} />
           </Routes>
         </>
         :
