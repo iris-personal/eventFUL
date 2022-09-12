@@ -18,12 +18,12 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path='/calendar' element={<CalendarPage day={selectedDay} setSelectedDay={setSelectedDay} />} />
-            <Route path='/activities' element={<ActivitiesPage day={selectedDay} activity={activity} setActivity={setActivity} />} />
+            <Route path='/calendar/activities' element={<ActivitiesPage day={selectedDay} activity={activity} setActivity={setActivity} />} />
           </Routes>
         </>
         :
         <AuthPage setUser={setUser} />
       }
-    </main>
+    </main> 
   );
 }

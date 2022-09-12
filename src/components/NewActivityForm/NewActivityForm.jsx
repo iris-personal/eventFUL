@@ -28,7 +28,6 @@ export default function NewActivityForm({ addActivity, day }) {
         <form onSubmit={handleSubmit}>
             <input 
             onChange={handleChange}
-            value={newActivity.date}
             type="Date"
             defaultValue={day}
             ></input>
@@ -45,5 +44,4 @@ export default function NewActivityForm({ addActivity, day }) {
         </form>
         </>
     );
-
 }

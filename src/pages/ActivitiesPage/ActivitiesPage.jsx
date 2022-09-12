@@ -12,12 +12,13 @@ export default function ActivitiesPage({ user, setUser, activity, setActivity, d
 useEffect(function() {
   async function getActivities() {
     const allActivities = await activitiesAPI.getAll();
-    setActivity(allActivities);
+    setActivities(allActivities);
   }
   getActivities();
 }, []);
-function addActivity(activity) {
-  setActivities([...activities, activity]);
+async function addActivity(activityData) {
+  const updatedActivities = await activitiesAPI.addOne(activityData);
+  setActivities([...activities, updatedActivities]);
 }
   return (
     <main className="ActivitiesPage">
