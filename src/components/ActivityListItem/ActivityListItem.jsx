@@ -1,6 +1,6 @@
 export default function ActivityListItem({ activity, index, day }) {
- 
-    if (JSON.stringify({day}) === JSON.stringify({activity})) {
+  // not comparing day to activity.day will need to do this in order to render correctly  
+    if ({day} === {activity}) {
         return (
             <li className="ActivityListItem">
                 <span>{activity.time}</span>
@@ -11,9 +11,5 @@ export default function ActivityListItem({ activity, index, day }) {
         return (
             <p>No Activities For {day.month}/{day.day}/{day.year} Yet!</p> 
         );
-    }
-
-
-        
-    
+    } 
 }
