@@ -54,8 +54,8 @@ Designed with your busy schedule in mind, eventFUL is here to help you keep trac
 * [Mongoose](https://mongoosejs.com/)
 * [MongoDB](https://mongodb.com/)
 * [React](https://reactjs.org/)
-* [CSS]
-* [HTML]
+* CSS
+* HTML
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
