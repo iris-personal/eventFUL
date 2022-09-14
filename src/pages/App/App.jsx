@@ -37,12 +37,10 @@ export default function App() {
         <>
           <Routes>
             {/* Route components in here */}
-            <Route path='/activities' element={<ActivitiesPage day={selectedDay} setSelectedDay={setSelectedDay} 
-            user={user} setUser={setUser} activities={activities} setActivities={setActivities} 
-            deleteActivity={deleteActivity} />} />
-            <Route path='/activities/:id/edit' element={<EditActivityPage updateActivity={updateActivity} activities={activities} />} />
-            <Route path='/activities/new' element={<NewActivityForm day={selectedDay} user={user} setUser={setUser} 
-            addActivity={addActivity}/>} />
+            <Route path='/activities' element={<ActivitiesPage
+            user={user} setUser={setUser} activities={activities} setActivities={setActivities} deleteActivity={deleteActivity} />} />
+            <Route path='/activities/:id/edit' element={<EditActivityPage updateActivity={updateActivity} activities={activities} user={user} setUser={setUser} />} />
+            <Route path='/activities/new' element={<NewActivityForm day={selectedDay} user={user} setUser={setUser} addActivity={addActivity}/>} />
             <Route path="/*" element={<Navigate to="/activities" />} />
           </Routes>
         </>

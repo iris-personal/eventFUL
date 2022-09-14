@@ -3,7 +3,6 @@ import { useState } from "react";
 import Logo from "../Logo/Logo";
 import UserLogOut from "../UserLogOut/UserLogOut";
 import "../NewActivityForm/NewActivityForm.css"
-import CalendarPage from "../CalendarPage/CalendarPage";
 
 
 export default function NewActivityForm({ addActivity, user, setUser }) {
