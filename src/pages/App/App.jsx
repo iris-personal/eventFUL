@@ -11,6 +11,7 @@ import './App.css';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [activities, setActivities] = useState([]);
+  const [selectedDay, setSelectedDay] = useState([]);
   const navigate = useNavigate();
 
   async function addActivity(activityData) {

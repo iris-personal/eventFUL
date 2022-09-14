@@ -1,10 +1,8 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ActivitiesPage.css';
-import * as activitiesAPI from "../../utilities/activities-api";
-import Logo from '../../components/Logo/Logo';
-import UserLogOut from '../../components/UserLogOut/UserLogOut';
-import ActivityList from '../../components/ActivityList/ActivityList';
+import Logo from "../../components/Logo/Logo";
+import UserLogOut from "../../components/UserLogOut/UserLogOut";
+import ActivityList from "../../components/ActivityList/ActivityList";
 
 export default function ActivitiesPage({ user, setUser, activities, setActivities, deleteActivity }) {
 
