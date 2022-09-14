@@ -6,7 +6,6 @@
 <br />
 <div align="center">
   <a href="https://github.com/iris-personal/eventFUL"></a>
-  ![Logo](https://i.imgur.com/I90Vsiy.png)
 
   <h3 align="center">eventFUL</h3>
 
