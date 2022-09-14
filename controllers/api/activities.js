@@ -19,7 +19,7 @@ async function create(req, res) {
 }
 
 async function deleteActivity(req, res) {
-    const activity = await Activity.findOne({ 'activity._id': req.params.id});
+    await Activity.findByIdAndDelete(req.params.id);
     res.json('deleted');
 }
 
