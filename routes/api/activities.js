@@ -4,9 +4,9 @@ const express = require('express');
 const router = express.Router();
 const activitiesCtrl = require('../../controllers/api/activities');
 
-// GET /api/activities
-router.get('/', activitiesCtrl.index);
-// POST /api/activities/create
 router.post('/', activitiesCtrl.create);
+router.put('/update/:id', activitiesCtrl.updateActivity);
+router.get('/', activitiesCtrl.index);
+router.delete('/:id', activitiesCtrl.delete);
 
 module.exports = router;

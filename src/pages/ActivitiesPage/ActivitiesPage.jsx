@@ -4,10 +4,9 @@ import './ActivitiesPage.css';
 import * as activitiesAPI from "../../utilities/activities-api";
 import Logo from '../../components/Logo/Logo';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
-import CalendarPage from '../../components/CalendarPage/CalendarPage'
 import ActivityList from '../../components/ActivityList/ActivityList';
 
-export default function ActivitiesPage({ user, setUser, activity, day, setSelectedDay, activities, setActivities }) {
+export default function ActivitiesPage({ user, setUser, activities, setActivities, deleteActivity }) {
 
   useEffect(function() {
     async function getActivities() {
@@ -17,7 +16,6 @@ export default function ActivitiesPage({ user, setUser, activity, day, setSelect
     getActivities();
   }, []);
 
-  console.log(activities)
   return (
     <main className="ActivitiesPage">
       <aside>
@@ -25,8 +23,7 @@ export default function ActivitiesPage({ user, setUser, activity, day, setSelect
         <Link to="/activities/new" className="button btn-sm">NEW ACTIVITY</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
-      <CalendarPage day={day} setSelectedDay={setSelectedDay} />
-      <ActivityList day={day} activities={activities} activity={activity} />
+      <ActivityList activities={activities} deleteActivity={deleteActivity} />
     </main>
   );
 }

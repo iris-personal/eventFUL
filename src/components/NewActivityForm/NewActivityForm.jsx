@@ -6,7 +6,7 @@ import "../NewActivityForm/NewActivityForm.css"
 import CalendarPage from "../CalendarPage/CalendarPage";
 
 
-export default function NewActivityForm({ addActivity, day, setSelectedDay, user, setUser }) {
+export default function NewActivityForm({ addActivity, user, setUser }) {
     const [newActivity, setNewActivity] = useState({
         date: "",
         time: "",

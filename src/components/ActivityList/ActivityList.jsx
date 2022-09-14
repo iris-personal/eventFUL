@@ -1,25 +1,15 @@
+import { useEffect } from "react";
+import * as activitiesAPI from "../../utilities/activities-api";
 import ActivityListItem from "../ActivityListItem/ActivityListItem";
 
-export default function ActivityList({ activities, activity, day }) {
-    if (!day) return null;
-    // const activityListItems = activities.map((activity, index) => (
-    //     <ActivityListItem activity={activity} key={index} index={index} day={day} />
-    // ));
-    const activityListItems = activities.filter((activity, index) => (
-        activity.date === day && 
-        <ActivityListItem activity={activity} key={index} index={index} day={day} />
-    ));
-    console.log(day);
+export default function ActivityList({ activities, deleteActivity }) {
+
+    const activitiesList = activities && activities.map((activity, index) => <ActivityListItem activity={activity} deleteActivity={deleteActivity} />)
     return (
         <div className="activity-card"> 
-            {activity.date === day ?
-                <div>
-                    <h4>{day.month}/{day.day}/{day.year}'s Activities</h4>
-                    <ul className="padding-0">{activityListItems}</ul>  
-                </div>   
-                :
-                <h4>No Activities For {day.month}/{day.day}/{day.year} Yet!</h4> 
-            }
+            <div>
+                <ul className="padding-0">{activitiesList}</ul>  
+            </div>    
         </div>
       );
     }
