@@ -102,6 +102,8 @@ GitHub Project Link: [https://github.com/iris-personal/eventFUL](https://github.
 
 Deployed Project Link: [https://event-ful-app.herokuapp.com/](https://event-ful-app.herokuapp.com/)
 
+Trello Planning Link: [https://trello.com/b/nCG9G5L3/project-4-board](https://trello.com/b/nCG9G5L3/project-4-board)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
