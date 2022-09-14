@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/iris-personal/eventFUL">
-    <img src="https://i.imgur.com/I90Vsiy.png" alt="favicon" width="80" height="80">
+    <img src="(https://i.imgur.com/j2MUt3V.png)" alt="favicon" width="80" height="80">
   </a>
 
   <h3 align="center">eventFUL</h3>
