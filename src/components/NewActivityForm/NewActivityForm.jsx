@@ -40,7 +40,7 @@ export default function NewActivityForm({ addActivity, user, setUser }) {
                         <label>Date</label>
                         <input type="date" name="date" value={newActivity.date} onChange={handleChange} required />
                         <label>Time of Activity</label>
-                        <input type="string" name="time" value={newActivity.time} onChange={handleChange} required />
+                        <input type="time" name="time" value={newActivity.time} onChange={handleChange} required />
                         <label>Activitiy</label>
                         <input type="text" name="name" value={newActivity.name} onChange={handleChange} required />
                         <button type="submit">ADD ACTIVITY</button>

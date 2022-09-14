@@ -11,7 +11,6 @@ import './App.css';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [activities, setActivities] = useState([]);
-  const [selectedDay, setSelectedDay] = useState(null);
   const navigate = useNavigate();
 
   async function addActivity(activityData) {
@@ -37,10 +36,9 @@ export default function App() {
         <>
           <Routes>
             {/* Route components in here */}
-            <Route path='/activities' element={<ActivitiesPage
-            user={user} setUser={setUser} activities={activities} setActivities={setActivities} deleteActivity={deleteActivity} />} />
+            <Route path='/activities' element={<ActivitiesPage user={user} setUser={setUser} activities={activities} setActivities={setActivities} deleteActivity={deleteActivity} />} />
             <Route path='/activities/:id/edit' element={<EditActivityPage updateActivity={updateActivity} activities={activities} user={user} setUser={setUser} />} />
-            <Route path='/activities/new' element={<NewActivityForm day={selectedDay} user={user} setUser={setUser} addActivity={addActivity}/>} />
+            <Route path='/activities/new' element={<NewActivityForm user={user} setUser={setUser} addActivity={addActivity}/>} />
             <Route path="/*" element={<Navigate to="/activities" />} />
           </Routes>
         </>

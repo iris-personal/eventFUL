@@ -1,17 +1,16 @@
 .NewActivityPage {
     height: 100%;
     display: grid;
-    grid-template-columns: 1.6fr 3fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1.5fr 3fr;
     background-color: var(--green);
     border-radius: 2vmin;
-  }
+}
   
-  .NewActivityPage aside {
+.NewActivityPage aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 3vmin 2vmin;
-  }
+}
 

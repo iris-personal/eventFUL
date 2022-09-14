@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const activitySchema = {
     date: {
-        type: Date 
+        type: String
     },
     time: {
         type: String
