@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from "react";
 import Logo from "../Logo/Logo";
 import UserLogOut from "../UserLogOut/UserLogOut";
+import "../NewActivityForm/NewActivityForm.css"
 import CalendarPage from "../CalendarPage/CalendarPage";
 
 
@@ -33,25 +34,20 @@ export default function NewActivityForm({ addActivity, day, setSelectedDay, user
                 <Link to="/activities" className="button btn-sm">ACTIVITY LIST</Link>
                 <UserLogOut user={user} setUser={setUser} />
             </aside>
-            <CalendarPage day={day} setSelectedDay={setSelectedDay} /> 
-            <h1>Add Activity</h1>
-            <form onSubmit={handleSubmit}>
-                <input 
-                onChange={handleChange}
-                type="Date"
-                defaultValue={day}
-                ></input>
-                <input 
-                onChange={handleChange}
-                value={newActivity.time}
-                type="String"
-                ></input>
-                <input 
-                onChange={handleChange}
-                value={newActivity.name}
-                type="String"
-                ></input>
-            </form>
+            <div>
+                <h1>Add Activity</h1>
+                <div className="Form">
+                    <form autoComplete="off" onSubmit={handleSubmit}>
+                        <label>Date</label>
+                        <input type="date" name="date" value={newActivity.date} onChange={handleChange} required />
+                        <label>Time of Activity</label>
+                        <input type="string" name="time" value={newActivity.time} onChange={handleChange} required />
+                        <label>Activitiy</label>
+                        <input type="text" name="name" value={newActivity.name} onChange={handleChange} required />
+                        <button type="submit">ADD ACTIVITY</button>
+                    </form>
+                </div>
+            </div>
         </main>
     );
 }

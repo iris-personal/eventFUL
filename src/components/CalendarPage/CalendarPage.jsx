@@ -3,7 +3,11 @@ import { Calendar } from "react-modern-calendar-datepicker";
 import "./CalendarPage.css"
 
 export default function CalendarPage({ day, setSelectedDay }) {
-  return (
+    // function handleSelectedDay(evt) {
+    //     console.log(evt.target.value);
+    // }
+
+    return (
     <>  
       <Calendar
         value={day}

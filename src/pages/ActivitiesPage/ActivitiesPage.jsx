@@ -17,6 +17,7 @@ export default function ActivitiesPage({ user, setUser, activity, day, setSelect
     getActivities();
   }, []);
 
+  console.log(activities)
   return (
     <main className="ActivitiesPage">
       <aside>
